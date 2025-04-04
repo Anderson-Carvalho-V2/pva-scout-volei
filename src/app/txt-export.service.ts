@@ -14,7 +14,7 @@ export class TxtExportService {
   }
 
   adicionarFundamento(atleta: any, fundamento: any) {
-    const linha = `Nome: ${atleta.nome}, Posição: ${atleta.posicao}, fundamento: ${fundamento}`;
+    const linha = `Nome: ${atleta.nome}, Posicao: ${atleta.posicao}, fundamento: ${fundamento}`;
     this.dadosAtletas.push(linha);
   }
 

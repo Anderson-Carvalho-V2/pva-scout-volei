@@ -37,12 +37,12 @@
       <button mat-raised-button color="accent" (click)="selecionarFundamento('Bloqueio')">Bloqueio</button>
       <button mat-raised-button color="warn" (click)="selecionarFundamento('Defesa')">Defesa</button>
       <button mat-raised-button color="primary" (click)="selecionarFundamento('Cobertura')">Cobertura</button>
-      <button mat-raised-button color="accent" (click)="selecionarFundamento('Erro')">Erro</button>
+      
     </div>
 
 
     <div *ngIf="painelVisivel === 'quadra'" class="quadra">
-      <h3>Posição dos Atletas</h3>
+      <br>
       <div class="meia-quadra">
         <div class="linha-ataque"></div>
     
@@ -51,15 +51,18 @@
           *ngFor="let atleta of atletasTitulares" 
           class="atleta"
           [ngClass]="'posicao-' + atleta.posicao"
-          (click)="posicionarAtleta(atleta.nome)">
+          (click)="selecionarAtleta(atleta)">
           {{ atleta.numero }}
         </button>
     
       </div>
+
+      <div class="botoes-acoes">
+        <button mat-raised-button color="primary" (click)="exportarTxt()">Relatório</button>
+        <button mat-raised-button color="accent" (click)="fazerRodizio()">Rodízio</button>
+      </div>
     </div>
-    
-
-
+        
     <!-- Painel de Ação do Atleta (exibido quando algum fundamento é clicado) -->
     <!-- Painel da Ação do Atleta -->
     <div *ngIf="painelVisivel === 'acao'" class="painel-fundamento">
@@ -68,7 +71,7 @@
       </div>
       <div class="painel-grid">
         <button mat-raised-button *ngFor="let acao of acoesDisponiveis" class="painel-botao"
-          (click)="voltarParaQuadra()">
+          (click)="adicionarFundamento(acao)">
           {{ acao }}
         </button>
       </div>

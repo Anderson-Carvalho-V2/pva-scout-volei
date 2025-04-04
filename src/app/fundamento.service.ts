@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 export class FundamentoService {
   private fundamentosMock = {
     'Passe': ['PA', 'PB', 'PC', 'PX'],
-    'Saque': ['SA1', 'SA4', 'SA6', 'SE1', 'SE4', 'SE6', 'SP1', 'SP4', 'SP6', 'SX'],
-    'Ataque': ['AA1', 'AA4', 'AA6', 'AE1', 'AE4', 'AE6', 'AP1', 'AP4', 'AP6', 'AB', 'AX'],
-    'Bloqueio': ['BA', 'BP', 'BD', 'BX'],
-    'Defesa': ['DA', 'DB', 'DC', 'DX'],
-    'Levantamento': ['LA', 'LB', 'LC', 'PX'],
-    'Cobertura': ['CA', 'CB', 'CC', 'CX'],
-    'Erro': ['Rede', 'Condução', 'Dois toques',]
+    'Saque': ['S1A', 'S5A', 'S6A', 'S1E', 'S5E', 'S6E', 'S1A', 'S5A', 'S6A', 'SX'],
+    'Ataque': ['APA', 'ADA', 'ACA', 'APE', 'ADE', 'ACE', 'APP', 'ADP', 'ACP', 'AB', 'AX'],
+    'Bloqueio': ['BPE', 'BCE', 'BOE', 'BPP', 'BCP', 'BOP', 'BX'],
+    'Defesa': ['DA', 'DE', 'DX'],
+    'Levantamento': ['LPP', 'LPR', 'LCP', 'LCR', 'LOP', 'LOR', 'PX'],
+    'Cobertura': ['CA', 'CE', 'CX'],
+    
   };
 
   getAcoesPorFundamento(fundamento: keyof typeof this.fundamentosMock): string[] {

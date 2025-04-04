@@ -1,0 +1,41 @@
+/* Estilização do Placar */
+.placar {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .placar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .times {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .botoes {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .painel-pontos {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+  }

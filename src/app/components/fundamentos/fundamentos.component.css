@@ -1,0 +1,121 @@
+/* --- fundamentos.component.css --- */
+.fundamentos {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .fundamentos h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .grid-fundamentos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-fundamentos button {
+    min-width: 80px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* 🎯 **PAINEL DE FUNDAMENTOS (Restaurado!)** 🎯 */
+  .fundamentos {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .fundamentos h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Responsividade: Botões menores e organizados */
+  .grid-fundamentos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-fundamentos button {
+    min-width: 80px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* 🔥 PAINEL DE AÇÃO DO ATLETA (Restaurado!) 🔥 */
+  .painel-fundamento {
+    width: 100%;
+    height: 300px;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  .painel-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .painel-titulo h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Grade dos botões */
+  .painel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .painel-botao {
+    font-size: 14px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilizando o botão de voltar para a quadra */
+  .btn-voltar-quadra {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-voltar-quadra:hover {
+    background-color: #303f9f;
+  }

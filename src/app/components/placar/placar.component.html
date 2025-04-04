@@ -1,0 +1,23 @@
+<div class="placar">
+    <h3>Placar</h3>
+    <div class="times">
+      <div class="time">
+        <span>Time A</span>
+        <div class="botoes">
+          <button mat-mini-fab color="accent" (click)="incrementarPontos('A')">+</button>
+          <button mat-mini-fab color="warn" (click)="decrementarPontos('A')">-</button>
+        </div>
+      </div>
+      <div class="painel-pontos">
+        <span>{{ pontosA }} x {{ pontosB }}</span>
+      </div>
+      <div class="time">
+        <span>Time B</span>
+        <div class="botoes">
+          <button mat-mini-fab color="accent" (click)="incrementarPontos('B')">+</button>
+          <button mat-mini-fab color="warn" (click)="decrementarPontos('B')">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="quadra">
+    <h3>Posição dos Atletas</h3>
+    <div class="meia-quadra">
+      <div class="linha-ataque"></div>
+      <button 
+        *ngFor="let atleta of atletasTitulares" 
+        class="atleta"
+        [ngClass]="'posicao-' + atleta.posicao"
+        (click)="posicionarAtleta(atleta.nome)">
+        {{ atleta.numero }}
+      </button>
+    </div>
+  </div>
+  

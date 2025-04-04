@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class AtletaService {
   private atletasMock = [
-    { nome: 'Jogador 1', numero: 1, posicao: 1 },
-    { nome: 'Jogador 2', numero: 2, posicao: 2 },
-    { nome: 'Jogador 3', numero: 3, posicao: 3 },
-    { nome: 'Jogador 4', numero: 4, posicao: 4 },
-    { nome: 'Jogador 5', numero: 5, posicao: 5 },
-    { nome: 'Jogador 6', numero: 6, posicao: 6 },
+    { nome: 'Lucas', numero: 12, posicao: 1 },
+    { nome: 'Anderson', numero: 10, posicao: 2 },
+    { nome: 'Andson', numero: 4, posicao: 3 },
+    { nome: 'Robson', numero: 16, posicao: 4 },
+    { nome: 'Jonatas', numero: 15, posicao: 5 },
+    { nome: 'Luan', numero: 7, posicao: 6 },
     { nome: 'Jogador 7', numero: 7, posicao: 0 },
     { nome: 'Jogador 8', numero: 8, posicao: 0 },
     { nome: 'Jogador 9', numero: 9, posicao: 0 },

@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FundamentoService } from './fundamento.service'
 import { AtletaService } from './atleta.service';
+import { TxtExportService } from './txt-export.service' 
 
 
 @Component({
@@ -25,8 +26,13 @@ export class AppComponent implements OnInit{
   atletas:any = [];  // Aqui vamos armazenar os atletas
   atletasTitulares:any = [];  // Apenas os atletas titulares
   atletasReservas:any = [];  // Apenas os atletas reservas
+  atletaSelecionado: any = null; // Armazena o atleta selecionado
 
-  constructor(private fundamentoService: FundamentoService, private atletaService: AtletaService) {}
+  constructor(
+    private fundamentoService: FundamentoService, 
+    private atletaService: AtletaService,
+    private txtExportService: TxtExportService
+  ) {}
 
   ngOnInit() {
     // Obtendo todos os atletas
@@ -77,10 +83,47 @@ export class AppComponent implements OnInit{
     this.painelVisivel = 'quadra'; // Volta para o painel da quadra
   }
 
-   // Método para manipular a ação quando o botão de um atleta for clicado
-   posicionarAtleta(nome: string) {
-    console.log(`${nome} foi posicionado na quadra!`);
+  selecionarAtleta(atleta: any) {
+    // this.atletaSelecionado = null;
+    this.atletaSelecionado = atleta;
+    console.log('Atleta selecionado:', atleta);
+    // this.txtExportService.adicionarAtleta(atleta);
   }
 
+  adicionarFundamento(fundamento: any){
+    // console.log('Atleta selecionado:', this.atletaSelecionado);
+    console.log('Fundamento selecionado:', fundamento);
+    this.txtExportService.adicionarFundamento(this.atletaSelecionado, fundamento);
+    this.voltarParaQuadra();
+  
+  }
+
+  exportarTxt() {
+    this.txtExportService.exportarParaTxt();
+  }
+
+  fazerRodizio() {
+    if (!this.atletasTitulares || this.atletasTitulares.length < 2) {
+      console.error("Não há atletas suficientes para o rodízio.");
+      return;
+    }
+  
+    // Pega a posição do último atleta antes da rotação
+    let ultimaPosicao = this.atletasTitulares[this.atletasTitulares.length - 1]?.posicao;
+  
+    // Percorre do final para o início movendo as posições
+    for (let i = this.atletasTitulares.length - 1; i > 0; i--) {
+      if (this.atletasTitulares[i - 1]) {
+        this.atletasTitulares[i].posicao = this.atletasTitulares[i - 1].posicao;
+      }
+    }
+  
+    // O primeiro atleta assume a posição do último
+    if (this.atletasTitulares[0]) {
+      this.atletasTitulares[0].posicao = ultimaPosicao;
+    }
+  }
+  
+  
   
 }

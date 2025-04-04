@@ -109,18 +109,18 @@ export class AppComponent implements OnInit{
     }
   
     // Pega a posição do último atleta antes da rotação
-    let ultimaPosicao = this.atletasTitulares[this.atletasTitulares.length - 1]?.posicao;
+    let ultimaPosicao = this.atletasTitulares[this.atletasTitulares.length - 1]?.posicaoQuadra;
   
     // Percorre do final para o início movendo as posições
     for (let i = this.atletasTitulares.length - 1; i > 0; i--) {
       if (this.atletasTitulares[i - 1]) {
-        this.atletasTitulares[i].posicao = this.atletasTitulares[i - 1].posicao;
+        this.atletasTitulares[i].posicaoQuadra = this.atletasTitulares[i - 1].posicaoQuadra;
       }
     }
   
     // O primeiro atleta assume a posição do último
     if (this.atletasTitulares[0]) {
-      this.atletasTitulares[0].posicao = ultimaPosicao;
+      this.atletasTitulares[0].posicaoQuadra = ultimaPosicao;
     }
   }
   

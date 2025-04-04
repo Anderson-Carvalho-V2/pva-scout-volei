@@ -50,7 +50,7 @@
         <button 
           *ngFor="let atleta of atletasTitulares" 
           class="atleta"
-          [ngClass]="'posicao-' + atleta.posicao"
+          [ngClass]="'posicao-' + atleta.posicaoQuadra"
           (click)="selecionarAtleta(atleta)">
           {{ atleta.numero }}
         </button>
